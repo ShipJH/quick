@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class QuickApplication {
 
 	public static void main(String[] args) {
+		System.out.println("세팅개발중.");
 		SpringApplication.run(QuickApplication.class, args);
 	}
 
