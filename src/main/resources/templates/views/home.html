@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  	  layout:decorate="~{fragments/Layout}" 
+  	  lang="ko" 
+  	  xmlns:th="http://www.thymeleaf.org">
+  	  
+<th:block layout:fragment="custom_css">
+  <!-- 커스텀CSS 실제 적용 구간 -->
+	<link rel="stylesheet" href="resources/assets/css/jquery-ui-1.9.2.custom.css" type="text/css">
+</th:block>
+
+<th:block layout:fragment="custom_js">
+	<!-- 커스텀 js  -->
+	<script type="text/javascript" src="resources/assets/js/jquery-ui-1.9.2.custom.min.js"></script>
+
+	<script type="text/javascript">
+
+	</script>
+</th:block>
+
+<title>home</title>
+
+<body>
+  <div layout:fragment="content">
+	
+	이곳은 home 부분.
+
+  </div>
+</body>
+
+</html>

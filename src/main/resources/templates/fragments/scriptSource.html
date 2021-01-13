@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<th:block th:fragment="scriptSource">
+
+    <!-- 공통스크립트 공간 -->
+    <script type="text/javascript" src="resources/assets/js/jquery-3.3.1.min.js"></script>
+	<!-- END 공통스크립트 공간 -->
+    
+    
+    <!-- custom_js공간 -->
+    <th:block layout:fragment="custom_js"></th:block>
+
+</th:block>
+</html>

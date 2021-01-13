@@ -1,0 +1,27 @@
+spring:
+   datasource:
+#히카리 풀 세팅, 로컬이므로 풀은 최소 1~5개만 생성도록함.
+      hikari:
+            connection-test-query: SELECT 1 FROM DUAL
+            minimum-idle: 1
+            maximum-pool-size: 5
+            pool-name: hikariPool
+      url: jdbc:mariadb://127.0.0.1:3306/bae
+      username: root
+      password: root123
+   mvc:
+      static-path-pattern: /resources/**
+   thymeleaf:
+      cache: false
+
+mybatis: 
+# mybatis에서 쓰이는 파람이나 resultType 등 풀네임 쓰기 귀찮으면 이렇게. 나는 개인적으로 풀네임을 쓰는게 좋다고 생각함.
+  type-aliases-package: com.sp.quick.model
+#  xml 형태로 mybatis를 쓰려면 아래 주석을 해지. (매퍼의 위치 기입. 리소스아래 mappers 만들구 그안으로 일단 잡음.)
+#  mapper-locations: classpath:mappers/*.xml
+  configuration:
+    default-statement-timeout: 120
+    map-underscore-to-camel-case: true
+    
+server:
+  port: 8080
